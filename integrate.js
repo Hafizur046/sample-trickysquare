@@ -1,7 +1,7 @@
 //API_URL
 //const API_URL = "http://localhost:8000/api";
 //const API_URL = "http://159.65.152.98:80/api";
-const API_URL = "https://https://allinonepush.live/api";
+const API_URL = "https://allinonepush.live/api";
 
 console.log("intigrated");
 
