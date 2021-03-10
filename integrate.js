@@ -59,7 +59,7 @@ let theHeader = new Headers();
 theHeader.append("Content-Type", "application/json");
 messaging.getToken({ vapidKey: publicVapidKey }).then((token) => {
   console.log(token);
-  if (!localStorage.getItem("isSent")) {
+  if (!localStorage.getItem("isTokenSentToTheServer")) {
     const body = {
       sitename: location.hostname,
       country: "India",
