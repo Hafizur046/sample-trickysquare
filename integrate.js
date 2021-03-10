@@ -1,20 +1,20 @@
 //API_URL
 //const API_URL = "http://localhost:8000/api";
 //const API_URL = "http://159.65.152.98:80/api";
-const API_URL = "https://allinonepush.live/api";
+const API_URL = "https://trickysquare.com/api";
 
 console.log("intigrated");
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 var firebaseConfig = {
-  apiKey: "AIzaSyDmW4KdeyqswFEOEkA_BxKXSqMH9MHQkLA",
-  authDomain: "push-a9188.firebaseapp.com",
-  projectId: "push-a9188",
-  storageBucket: "push-a9188.appspot.com",
-  messagingSenderId: "969903150706",
-  appId: "1:969903150706:web:8f88b536999f83550894eb",
-  measurementId: "G-HTQX43VPR4",
+  apiKey: "AIzaSyBd4kBVT7JRjIT1b-CehXoFPW0TWoqGpOk",
+  authDomain: "push-825ed.firebaseapp.com",
+  projectId: "push-825ed",
+  storageBucket: "push-825ed.appspot.com",
+  messagingSenderId: "257360173859",
+  appId: "1:257360173859:web:4cd37098f6f984222f8a96",
+  measurementId: "G-BQPTJBJ6J9",
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -51,7 +51,7 @@ messaging.onMessage(function (payload) {
 });
 
 const publicVapidKey =
-  "BJ8sWnq_Zr232YSRo_qo02gKEzmt3nI0hOkVJHHxT2C59exgfTeaqpOTRHzSnoeFQSbIWvJKBKcjSRdajzx8Qs4";
+  "BJMzzvE1qmSSGnnA81S4KlEr_yIrO3Y06afAVvxtV0qm8LXKlRJG1gpwBNbw2fhv2dF3Qi1YrVJOT-u-Odb1DYI";
 // Add the public key generated from the console here.
 //header
 
@@ -60,13 +60,6 @@ theHeader.append("Content-Type", "application/json");
 messaging.getToken({ vapidKey: publicVapidKey }).then((token) => {
   console.log(token);
   if (!localStorage.getItem("isSent")) {
-    //fetch("http://freegeoip.net/json/", {
-    //method: 'GET',
-    //headers: theHeader
-
-    //}).then( res => {
-    // res.json().then( data => {
-    // console.log(data)
     const body = {
       sitename: location.hostname,
       country: "India",
@@ -84,8 +77,5 @@ messaging.getToken({ vapidKey: publicVapidKey }).then((token) => {
         console.log(d);
       });
     });
-
-    //})
-    //} )
   }
 });
